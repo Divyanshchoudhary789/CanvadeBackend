@@ -1,0 +1,12 @@
+const express = require("express");
+const enquiryController = require("../../controllers/student/enquire.controller");
+const authMiddleware = require("../../middleware/auth");
+const router = express.Router();
+router.get("/", enquiryController.getAllEnquiries);
+router.get("/course/:courseId", enquiryController.getEnquiriesByCourseId);
+router.post("/create", authMiddleware, enquiryController.createEnquiry);
+router.get("/my-enquiries", authMiddleware, enquiryController.getMyEnquiries);
+router.put("/update/:enquiryId", authMiddleware, enquiryController.updateEnquiry);
+router.delete("/delete/:enquiryId", authMiddleware, enquiryController.deleteEnquiry);
+// router.get("/enroll", authMiddleware, enquiryController.getMyEnrollments);
+module.exports = router;
