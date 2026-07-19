@@ -6,7 +6,7 @@ require("dotenv").config();
 const userRoutes = require("./src/routes/student/user.routes");
 const enrollmentRoutes = require("./src/routes/student/enrollment.routes");
 const checkoutRoutes = require("./src/routes/student/checkout.routes");
-const cartRoutes  = require("./src/routes/student/cart.routes");
+const cartRoutes = require("./src/routes/student/cart.routes");
 const enquiryRoutes = require("./src/routes/student/enquire.routes");
 const saveCourse = require("./src/routes/student/saveCourse.routes");
 const searchCoursesRoutes = require("./src/routes/student/searchCourses.route");
@@ -30,7 +30,7 @@ const supportRoutes = require("./src/routes/support.routes");
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = ["http://localhost:5173", "https://canvade.com", "https://canvade-frontend.vercel.app"];
+const allowedOrigins = ["http://localhost:5173", "https://canvade.com", "https://canvade-frontend.vercel.app", "https://canvade-frontend-tawny.vercel.app/"];
 
 const corsOptions = {
   origin(origin, callback) {
