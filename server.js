@@ -30,7 +30,7 @@ const supportRoutes = require("./src/routes/support.routes");
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = ["http://localhost:5173", "https://canvade.com", "https://canvade-frontend.vercel.app", "https://canvade-frontend-tawny.vercel.app"];
+const allowedOrigins = ["http://localhost:5173", "https://canvade.com", "https://canvade-frontend.vercel.app", "https://canvade-frontend-tawny.vercel.app", "https://www.canvade.com"];
 
 const corsOptions = {
   origin(origin, callback) {
